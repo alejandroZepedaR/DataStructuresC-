@@ -1,0 +1,23 @@
+Write a program to help a local restaurant automate its breakfast billing system. The program should do the following:
+
+Show the customer the different breakfast items offered by the restaurant.
+
+Allow the customer to select more than one item from the menu.
+
+Calculate and print the bill.
+
+Assume that the restaurant offers the following breakfast items (the price of each item is shown to the right of the item):
+
+Program code. The lines read as follows. Line 1: plain egg, indented once, $, 1, point, 45. Line 2: bacon and egg, indented once, $, 2, point, 45. Line 3: muffin, indented once, $, 0, point, 99. Line 4: French toast, indented once, $, 1, point, 99. Line 5: fruit basket, indented once, $, 2, point, 49. Line 6: cereal, indented once, $, 0, point, 69. Line 7: coffee, indented once, $, 0, point, 50. Line 8: tea, indented once, $, 0, point, 75.
+Use an array menuList of type menuItemType, as defined in Programming Exercise 3. Your program must contain at least the following functions:
+
+Function getData: This function loads the data into the array menuList.
+
+Function showMenu: This function shows the different items offered by the restaurant and tells the user how to select the items.
+
+Function printCheck: This function calculates and prints the check. (Note that the billing amount should include a 5% tax.) A sample output is:
+
+Program code. The lines read as follows. Line 1: welcome to Johnny's restaurant. Line 2: bacon and egg, indented once, $, 2, point, 45. Line 3: muffin, indented once, $, 0, point, 99. Line 4: coffee, indented once, $, 0, point, 50. Line 5: tax, indented once, $, 0, point, 20. Line 6: amount due, indented once, $, 4, point, 14.
+Format your output with two decimal places. The name of each item in the output must be left justified. You may assume that the user selects only one item of a particular type.
+
+

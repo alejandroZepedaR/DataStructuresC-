@@ -1,0 +1,13 @@
+(Apartment problem) A real estate office handles, say, 50 apartment units. When the rent is, say, $600 per month, all the units are occupied. However, for each, say, $40 increase in rent, one unit becomes vacant. Moreover, each occupied unit requires an average of $27 per month for maintenance. How many units should be rented to maximize the profit?
+
+Write a program that prompts the user to enter:
+
+The total number of units.
+
+The rent to occupy all the units.
+
+The increase in rent that results in a vacant unit.
+
+Amount to maintain a rented unit.
+
+The program then outputs the number of units to be rented to maximize the profit.
