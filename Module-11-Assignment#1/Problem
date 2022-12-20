@@ -1,0 +1,4 @@
+How many parameters can a catch block have?
+A catch block can have at most one catch block parameter.
+
+

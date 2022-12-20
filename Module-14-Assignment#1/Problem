@@ -1,0 +1,10 @@
+Consider the following list:
+
+Program code. In the code, the words in the variable names are merged. Line 1: 5, comma, 12, comma, 25, comma, 32, comma, 38, comma, 46, comma, 58, comma, 62, comma, 85, comma, 90, comma, 97, comma, 105, comma, 110.
+Using the binary search as described in this chapter, how many comparisons are required to find whether the following items are in the list? Show the values of first, last, and middle and the number of comparisons after each iteration of the loop. (3)
+
+32
+20
+105
+60
+

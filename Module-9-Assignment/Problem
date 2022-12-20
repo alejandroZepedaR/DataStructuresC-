@@ -1,0 +1,58 @@
+(Stock Market) Write a program to help a local stock trading company automate its systems. The company invests only in the stock market. At the end of each trading day, the company would like to generate and post the listing of its stocks so that investors can see how their holdings performed that day. We assume that the company invests in, say, 10 different stocks. The desired output is to produce two listings, one sorted by stock symbol and another sorted by percent gain from highest to lowest.
+
+The input data is provided in a file in the following format:
+
+symbol openingPrice closingPrice todayHigh todayLow prevClose volume
+
+The first line indicates that the stock symbol is MSMT, today’s opening price was 112.50, the closing price was 115.75, today’s high price was 116.50, today’s low price was 111.75, yesterday’s closing price was 113.50, and the number of shares currently being held is 6723823.
+
+Develop this programming exercise in two steps. In the first step (part a), design and implement a stock object. In the second step (part b), design and implement an object to maintain a list of stocks.
+
+(Stock Object) Design and implement the stock object. Call the class that captures the various characteristics of a stock object stockType.
+
+The main components of a stock are the stock symbol, stock price, and number of shares. Moreover, we need to output the opening price, closing price, high price, low price, previous price, and the percent gain/loss for the day. These are also all the characteristics of a stock. Therefore, the stock object should store all this information.
+
+Perform the following operations on each stock object:
+
+Set the stock information.
+
+Print the stock information.
+
+Show the different prices.
+
+Calculate and print the percent gain/loss.
+
+Show the number of shares.
+
+a.1.The natural ordering of the stock list is by stock symbol. Overload the relational operators to compare two stock objects by their symbols.
+a.2.Overload the insertion operator, <<, for easy output.
+a.3.Because the data is stored in a file, overload the stream extraction operator, >>, for easy input.
+For example, suppose infile is an ifstream object and the input file was opened using the object infile. Further suppose that myStock is a stock object. Then, the statement
+
+Program code. In the code, the words in the variable names are merged. Line 1: in file > > my stock, semi colon.
+reads the data from the input file and stores it in the object myStock. (Note that this statement reads and stores the data in the relevant components of myStock.)
+
+Now that you have designed and implemented the class stockType to implement a stock object in a program, it is time to create a list of stock objects.
+
+Let us call the class to implement a list of stock objects stockListType.
+
+The class stockListType must be derived from the class listType, which you designed and implemented in the previous exercise. However, the class stockListType is a very specific class, designed to create a list of stock objects. Therefore, the class stockListType is no longer a template.
+
+Add and/or overwrite the operations of the class listType to implement the necessary operations on a stock list.
+
+The following statement derives the class stockListType from the class listType.
+
+class listType
+class stockListType: public listType<stockType>
+{
+	member list
+}
+The member variables to hold the list elements, the length of the list, and the maximum size of the list were declared as protected in the class listType. Therefore, these members can be directly accessed in the class stockListType.
+
+Because the company also requires you to produce the list ordered by the percent gain/loss, you need to sort the stock list by this component. However, you are not to physically sort the list by the component percent gain/loss. Instead, you will provide a logical ordering with respect to this component.
+
+To do so, add a member variable, an array, to hold the indices of the stock list ordered by the component percent gain/loss. Call this array sortIndicesGainLoss. When printing the list ordered by the component percent gain/loss, use the array sortIndicesGainLoss to print the list. The elements of the array sortIndicesGainLoss will tell which component of the stock list to print next.
+
+Write a program that uses these two classes to automate the company’s analysis of stock data.
+
+
